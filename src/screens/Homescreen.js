@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function Homescreen() {
   return (
@@ -7,6 +7,10 @@ export default function Homescreen() {
       <Text style={styles.texto}>ESTA ES MI PAGINA DE HOME</Text>
       <Text style={styles.texto}>AGREGANDO MAS TEXTO</Text>
       <StatusBar style="auto" />
+      <Image
+          style={styles.image}
+          source={require("../../assets/Sun.png")}
+        />
     </View>
   );
 }
@@ -14,14 +18,18 @@ export default function Homescreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF6EA',
+    backgroundColor: '#61A4BC',
     alignItems: 'center',
     justifyContent: 'center',    
   },
   texto:{
-    color:'#4700D8',
+    color:'#fff',
     fontSize:25,
-    margin:10,   
-    
+    margin:10,      
+  },
+  image:{
+    width:'100', 
+    height:'100',
+    marginBottom: 15,
   }
 });
